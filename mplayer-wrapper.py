@@ -55,6 +55,8 @@ def get_song(f):
             info = line.split(':', 1)[1].strip()
             attrs = dict(re.findall("(\w+)='([^']*)'", info))
             return attrs.get('StreamTitle', None)
+    except IndexError:
+        return None
     except IOError:
         return None
 
