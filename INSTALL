@@ -6,5 +6,12 @@ To use it, ensure your ~/.i3status.conf contains this line:
 	output_format = "i3bar"
 in the 'general' section.
 Then, in your ~/.i3/config, use:
-	status_command i3status | ~/i3status/contrib/mplayer-wrapper.py
+	status_command i3status | ~/.i3/contrib/mplayer-wrapper.py
 in the 'bar' section.
+
+The last thing to do is to launch mplayer and create metadata file. Here is how i do this:
+	$ METADATA_FILE=/path/to/metadata.file
+	$ [ -f $METADATA_FILE ] && rm -f $METADATA_FILE
+	$ mplayer -playlist mystream.m3u | stdbuf -o L grep ICY > $METADATA_FILE
+	$ [ -f $METADATA_FILE ] && rm -f $METADATA_FILE
+

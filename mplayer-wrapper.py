@@ -9,7 +9,7 @@
 #     output_format = "i3bar"
 # in the 'general' section.
 # Then, in your ~/.i3/config, use:
-#     status_command i3status | ~/i3status/contrib/mplayer-wrapper.py
+#     status_command i3status | ~/.i3/contrib/mplayer-wrapper.py
 # In the 'bar' section.
 #
 # In its previous version it would display the cpu frequency governor, but you
@@ -28,7 +28,7 @@
 #     mplayer -playlist foo.m3u | stdbuf -o L grep ICY > $METADATA_FILE
 #     [ -f $METADATA_FILE ] && rm -f $METADATA_FILE
 #
-# © 2015 Mathieu Soula   <mathieu.soula@gmx.com>
+# © 2015 Mathieu Soula aka rid  <msoula@gmx.com>
 #
 # This program is free software. It comes without any warranty, to the extent
 # permitted by applicable law. You can redistribute it and/or modify it under
