@@ -1,0 +1,10 @@
+
+		i3status mplayer wrapper installation
+
+Normally you just have to copy mplayer-wrapper.py into ~/.i3/contrib directory.
+To use it, ensure your ~/.i3status.conf contains this line:
+	output_format = "i3bar"
+in the 'general' section.
+Then, in your ~/.i3/config, use:
+	status_command i3status | ~/i3status/contrib/mplayer-wrapper.py
+in the 'bar' section.
